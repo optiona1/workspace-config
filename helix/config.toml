@@ -1,0 +1,22 @@
+theme = "catppuccin_frappe"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+scrolloff = 0
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal.g]
+a = "code_action"
+
+[keys.normal]
+"C-y" = [
+  ":sh rm -f /tmp/yazi-file",
+  ":insert-output yazi --chooser-file=/tmp/yazi-file",
+  ":sh printf \"\\x1b[?1049h\\x1b[?2004h\" > /dev/tty",
+  ":open %sh{cat /tmp/yazi-selection}",
+  ":redraw"
+]
+

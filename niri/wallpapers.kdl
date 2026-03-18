@@ -1,0 +1,12 @@
+// background for workspace and backdrop
+spawn-sh-at-startup "swww-daemon & swww img $NIRICONF/wallpapers/backdrop.jpg"
+spawn-sh-at-startup "swaybg -i $NIRICONF/wallpapers/workspace.jpg -m fill -c '#010102'"
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+overview {
+  workspace-shadow {
+    off
+  }
+}
