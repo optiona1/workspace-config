@@ -1,0 +1,59 @@
+[user]
+	name = zuodong
+	email = uoong@foxmail.com
+
+[alias]
+    # 1. 高频查看类
+    st   = status -sb              # 短格式状态，分支名一目了然
+    lg   = log --graph --pretty=format:'%C(yellow)%h%C(reset) %C(blue)%d%C(reset) %s  %C(dim green)(%cr) %C(reset)%an' --abbrev-commit --date=relative
+    lga  = lg --all                  # 上述命令 + 所有分支
+    ll   = log --oneline -n 20       # 最近 20 条极简记录
+    ld   = log --stat -p             # 看每次提交改了哪些文件（diffstat）
+
+    # 2. 暂存/提交/推送一条龙
+    aa   = add -A                    # 一次性 add 所有变化（含删）
+    ci   = commit -v                 # 提交时自动带 -v（在注释里显示 diff）
+    cm   = commit -m                 # 快速提交：git cm "msg"
+    cam  = commit -am                # add + commit -m 合体，仅对 tracked 文件
+    amend= commit --amend --no-edit  # 小修补，不改 message
+    pop  = stash pop                 # 比全写省事
+    save = stash push -u -m          # 带 untracked 的 stash：git save "wip xxx"
+
+    # 3. 分支与变基
+    br   = branch -vv                # 看分支 + 上游 + 领先/落后
+    ba   = branch -a -vv             # 再看远程分支
+    bm   = branch -m                 # 重命名分支
+    bd   = branch -d                 # 安全删除（已合并才给删）
+    bD   = branch -D                 # 强制删除
+    cob  = checkout -b               # 创建并切换：git cob feature/foo
+    sw   = switch                    # Git 2.23+ 推荐的新指令
+    swc  = switch -c                 # 创建并 switch
+
+    # 4. 远程同步
+    pl   = pull --ff-only            # 只允许 fast-forward，干净合并
+    ps   = push                      # 少敲三个字母
+    pso  = push origin               # 更短
+    psu  = push -u origin            # 第一次推送同时设 upstream
+    graph= log --all --graph --decorate --oneline  # 远程/本地拓扑总览
+
+    # 5. 差异与补丁
+    d    = diff                      # 默认 diff
+    ds   = diff --staged             # 看暂存区 vs HEAD
+    dc   = diff --cached             # 同上（别名而已）
+    dt   = difftool                  # 调用外部 difftool
+    mt   = mergetool                 # 调用外部 mergetool
+
+    # 6. 清理与重置
+    unstage= reset HEAD --           # 把文件从暂存区撤下：git unstage <file>
+    undo  = reset --soft HEAD~1      # 撤销最后一次提交，改动留在暂存区
+    last  = log -1 --patch           # 看最后一次提交改了啥
+    cleanup = "!git branch --merged | egrep -v '(^\\*|master|main|develop)' | xargs git branch -d"
+                                     # 一键删掉已合并的本地分支
+
+    # 7. 杂项
+    tags = tag -n                    # 带注释地列标签
+    remotes = remote -v              # 看远程地址
+    url  = remote get-url origin     # 快速看 origin 的 URL
+    cp   = cherry-pick               # 简写
+    rc   = rebase --continue         # rebase 冲突后继续
+    ra   = rebase --abort            # rebase 失败想回退
