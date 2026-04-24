@@ -28,6 +28,7 @@
 - waybar + fuzzel + mako + swaylock 完整桌面体验
 - 空闲时间和电源模式可通过 waybar 组件和 fuzzel 菜单切换
 - 壁纸切换脚本，自动生成模糊 overview 背景
+- Omarchy 风格 Hub（启动常用应用 + 安装套件 + 系统动作）
 - 统一的配色方案
 - 简洁美观的 UI
 
@@ -84,6 +85,7 @@ cd workspace-config
 | <kbd>Super</kbd> + <kbd>P</kbd> | 剪贴板菜单 |
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>T</kbd> | 空闲时间菜单 |
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>P</kbd> | 电源模式菜单 |
+| <kbd>Super</kbd> + <kbd>,</kbd> | 打开 Omarchy Hub |
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>B</kbd> | 切换状态栏 |
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>W</kbd> | 壁纸选择器 |
 | <kbd>Super</kbd> + <kbd>Backspace</kbd> | 注销菜单 |

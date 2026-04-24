@@ -498,6 +498,7 @@ sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$SCRIPT_DIR/scripts/change-wallpaper.sh"
 sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$SCRIPT_DIR/scripts/swayidle.sh"
 sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$SCRIPT_DIR/scripts/swaylock.sh"
 sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$SCRIPT_DIR/scripts/wlogout.sh"
+sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$SCRIPT_DIR/scripts/omarchy-hub.sh"
 sed -i "s|\$NIRICONF|$SCRIPT_DIR|g" "$HOME/.config/wlogout/layout"
 
 # niri 验证
