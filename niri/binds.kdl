@@ -11,6 +11,7 @@ binds {
     Mod+P           { spawn-sh "cliphist list | fuzzel --dmenu --config $NIRICONF/fuzzel/clipboard.ini | cliphist decode | wl-copy"; }
     Mod+Ctrl+T      { spawn-sh "$NIRICONF/scripts/change-idle-time.sh"; }
     Mod+Ctrl+P      { spawn-sh "$NIRICONF/scripts/change-power-profile.sh"; }
+    Mod+Comma       { spawn-sh "$NIRICONF/scripts/omarchy-hub.sh"; }
     Mod+Ctrl+W      { spawn-sh "alacritty --title 'Wallpaper Selector' --config-file $NIRICONF/alacritty/float.toml -e $NIRICONF/scripts/change-wallpaper.sh"; }
     Mod+Backspace   { spawn-sh "$NIRICONF/scripts/wlogout.sh"; }
 
